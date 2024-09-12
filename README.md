@@ -14,7 +14,7 @@ Before deploying, ensure you have the following:
 
 
 ## Setup
-Professional Service is built on the Laravel PHP framework. This makes installation very simple. 
+Mquotient-admin is built on the Laravel PHP framework. This makes installation very simple. 
 1. Clone this repository onto your server. 
 2. Copy the .env.{local} to .env. 
 3. Ensure that the APP_URL in .env matches the address of your Project server. 
@@ -48,9 +48,9 @@ Note:
 
 In cPanel File Manager, open the .env file and update the necessary environment variables, especially for the database:
 
-DB_HOST=localhost
-DB_DATABASE=your_database_name
-DB_USERNAME=your_database_username
-DB_PASSWORD=your_database_password
+- DB_HOST=localhost
+- DB_DATABASE=your_database_name
+- DB_USERNAME=your_database_username
+- DB_PASSWORD=your_database_password
 
 
