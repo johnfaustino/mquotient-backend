@@ -41,7 +41,7 @@ class CareerApplicationController extends Controller
             CareerApplication::create($data);
 
             // Send email
-            Mail::to('johnbfaustino@gmail.com')->send(new SentCareerApplicationMail($data));
+            Mail::to(config('custom.mail_to'))->send(new SentCareerApplicationMail($data));
 
             Log::info('Career application submitted successfully', ['data' => $data]);
 

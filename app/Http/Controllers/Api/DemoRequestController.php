@@ -45,7 +45,7 @@ class DemoRequestController extends Controller
             DemoRequest::create($data);
 
             // Send email
-            Mail::to('johnbfaustino@gmail.com')->send(new SentGetDemoMail($data));
+            Mail::to(config('custom.mail_to'))->send(new SentGetDemoMail($data));
 
             Log::info('Demo request submitted successfully', ['data' => $data]);
 

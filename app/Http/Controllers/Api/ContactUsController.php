@@ -27,12 +27,12 @@ class ContactUsController extends Controller
             ContactUs::create($data);
 
             // Send email
-            Mail::to('johnbfaustino@gmail.com')->send(new SentContactUsMail($data));
+            Mail::to(config('custom.mail_to') )->send(new SentContactUsMail($data));
 
             Log::info('Contact us message submitted successfully', ['data' => $data]);
 
             return response()->json([
-                'message' => 'Your message has been submitted successfully.',
+                'message' => 'Your message has been submitted successfully.' ,
             ]);
 
         } catch (\Illuminate\Validation\ValidationException $e) {
